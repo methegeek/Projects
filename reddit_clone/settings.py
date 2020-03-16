@@ -41,11 +41,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%$97#$a!3#vro0=h0tupyte^=$f^@y#*#+4n@tmo%ku&!nol5='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-D=False
-DEBUG =D
+
+DEBUG =False
 #DEBUG  = (os.environ.get('DEBUG_VALUE')=='True')
-ALLOWED_HOSTS = ['sidsblog.herokuapp.com','.herokuapp.com','heroku.com']
-#ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = ['sidsblog.herokuapp.com','.herokuapp.com','heroku.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
