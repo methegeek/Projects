@@ -1,0 +1,139 @@
+body {
+  background: #d1cfcf;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444444;
+}
+
+ul {
+  margin: 0;
+}
+
+.bg-steel {
+  background-color: #000000;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #b1b6b9;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: #e7e3e3;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 500;
+}
+
+.content-section {
+  background: #dad9d9;
+  padding: 10px 20px;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  color: #8a8c8f;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #cecccc
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+.mr-2{
+  color: #333435;
+  text-decoration: underline;
+
+}
+.btn-outline-info {
+  color: #000000;
+  background-color: transparent;
+  background-image: none;
+  border-color: #000000;
+}
+.btn-info { 
+  color: rgb(14, 13, 13);
+  background-color: #979696;
+  border-color: #dad9d9;
+}
+.btn-outline-info:hover {
+  color: #fff;
+  background-color: #777575;
+  border-color: #000000;
+}
+.btn-info:hover {
+  color: #fff;
+  background-color: #000000;
+  border-color: #000000;
+}
+.list-group-item-dark {
+  color: #000000;
+  background-color:#dad9d9;
+}
+a:hover {
+  color: #6d6d6e;
+  text-decoration: underline;
+}
+a {
+  color: #020202;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+  text-decoration: none;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #f0eded;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
