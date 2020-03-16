@@ -41,9 +41,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%$97#$a!3#vro0=h0tupyte^=$f^@y#*#+4n@tmo%ku&!nol5='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = False
+DEBUG = False
 #DEBUG  = (os.environ.get('DEBUG_VALUE')=='True')
-#ALLOWED_HOSTS = ['sidsblog.herokuapp.com','localhost']
+ALLOWED_HOSTS = ['sidsblog.herokuapp.com']
 #ALLOWED_HOSTS = []
 
 
@@ -139,9 +139,10 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = '/static/'
-STATICFILES_STORAGE = '.storage.WhiteNoiseStaticFilesStorage'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL ='/media/'
 CRISPY_TEMPLATE_PACK ='bootstrap4'
