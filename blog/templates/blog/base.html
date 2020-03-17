@@ -71,7 +71,7 @@
                 {% if user.is_authenticated %}   
                       <h3>Profile</h3>
                       
-                      <p class='text-muted'>{{user.username}} is Currently Logged In.
+                      <p class='text-muted'>{{user.username}} is Logged In.
                           <ul class="list-group">
                           <a class="list-group-item list-group-item-dark" href="{% url 'post-create' %}">New Post</a>
                           <a class="list-group-item list-group-item-dark" href="{% url 'blog-home' %}">Home</a>
