@@ -4,8 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 from.models import Profile
 from captcha.fields import ReCaptchaField
 
-class ReCAPTCHAForm(forms.Form):
-    captcha = ReCaptchaField()
+
 
 
 class UserRegisterForm(UserCreationForm):
