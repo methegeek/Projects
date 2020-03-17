@@ -47,8 +47,8 @@ DEBUG404 = True
 
 ALLOWED_HOSTS = ['sidsblog.herokuapp.com'] #if you are running locally, then run with python manage.py runserver --insecure.You can give your webserver here.
 #DEBUG  = (os.environ.get('DEBUG_VALUE')=='True')
-#ALLOWED_HOSTS = ['sidsblog.herokuapp.com','.herokuapp.com','heroku.com']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['sidsblog.herokuapp.com','.herokuapp.com','heroku.com']
+#ALLOWED_HOSTS = ['*']
 
 
 # Application definition
