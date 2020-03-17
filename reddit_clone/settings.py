@@ -49,8 +49,7 @@ ALLOWED_HOSTS = ['sidsblog.herokuapp.com'] #if you are running locally, then run
 #DEBUG  = (os.environ.get('DEBUG_VALUE')=='True')
 ALLOWED_HOSTS = ['sidsblog.herokuapp.com','.herokuapp.com','heroku.com']
 #ALLOWED_HOSTS = ['*']
-
-
+SITE_ID = 1
 # Application definition
 
 INSTALLED_APPS = [
