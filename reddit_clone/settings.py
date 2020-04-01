@@ -51,8 +51,9 @@ ALLOWED_HOSTS = ['sidsblog.herokuapp.com','.herokuapp.com','heroku.com']
 #ALLOWED_HOSTS = ['*']
 SITE_ID = 1
 # Application definition
-
+ACCOUNT_ACTIVATION_DAYS = 7
 INSTALLED_APPS = [
+    
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
@@ -62,7 +63,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'storages'
+    'storages',
+    'verified_email_field',
+    'axes',
+    
+    
 ]
 
 MIDDLEWARE = [
@@ -74,6 +79,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'axes.middleware.FailedLoginMiddleware',
+    'axes.middleware.AxesMiddleware',
     
 ]
 
@@ -82,7 +89,7 @@ ROOT_URLCONF = 'reddit_clone.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,7 +133,13 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+AUTHENTICATION_BACKENDS = [
+    # AxesBackend should be the first backend in the AUTHENTICATION_BACKENDS list.
+    'axes.backends.AxesBackend',
 
+    # Django ModelBackend is the default authentication backend.
+    'django.contrib.auth.backends.ModelBackend',
+]
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
@@ -167,8 +180,9 @@ AWS_STORAGE_BUCKET_NAME=os.environ.get('AWS_STORAGE_BUCKET_NAME')
 AWS_DEFAULT_REGION ='eu-west-1'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
-
-
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
+AXES_ONLY_USER_FAILURES=True
+AXES_FAILURE_LIMIT=3
+AXES_COOLOFF_TIME=1
+AXES_LOCKOUT_TEMPLATE='blog\locked.html'
 django_heroku.settings(locals())

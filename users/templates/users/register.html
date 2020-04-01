@@ -1,6 +1,7 @@
 {% extends "blog/base.html" %}
 {% load crispy_forms_tags  %}
 {% block content %}
+{{ form.media.js }}
     <div class="content-section">
         <form method="POST">
             {% csrf_token %}
@@ -19,5 +20,6 @@
             </small>
         </div>
     </div>
-
+    {{ STATIC_URL }}js/jquery.js
+    {{ form.media.js }}
 {% endblock content %}

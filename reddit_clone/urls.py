@@ -20,6 +20,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 from users import views as user_views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register/',user_views.register,name='register'),
@@ -31,6 +32,7 @@ urlpatterns = [
     path('password_reset_confirm/<uidb64>/<token>/',auth_views.PasswordResetConfirmView.as_view(template_name='users/password_reset_confirm.html'),name='password_reset_confirm'),
      path('password_reset_complete/',auth_views.PasswordResetCompleteView.as_view(template_name='users/password_reset_complete.html'),name='password_reset_complete'),
     path('',include('blog.urls')),
+
 ]
 
 if settings.DEBUG:
