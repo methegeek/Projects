@@ -186,5 +186,6 @@ AXES_ENABLED=True
 AXES_ONLY_USER_FAILURES=True
 AXES_FAILURE_LIMIT=3
 AXES_COOLOFF_TIME=1
-AXES_LOCKOUT_TEMPLATE='/blog/templates/blog/locked.html'
+AXES_LOCKOUT_TEMPLATE='locked.html'
+
 django_heroku.settings(locals())
