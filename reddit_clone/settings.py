@@ -41,7 +41,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%$97#$a!3#vro0=h0tupyte^=$f^@y#*#+4n@tmo%ku&!nol5='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =True 
+DEBUG =False 
 #DEBUG404 = True 
 #ALLOWED_HOSTS = ['*'] # it works but not secure, so use
 
@@ -72,6 +72,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -79,8 +80,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     #'axes.middleware.FailedLoginMiddleware',
     'axes.middleware.AxesMiddleware',
+    'csp.middleware.CSPMiddleware',
     
 ]
 
@@ -181,11 +184,27 @@ AWS_STORAGE_BUCKET_NAME=os.environ.get('AWS_STORAGE_BUCKET_NAME')
 AWS_DEFAULT_REGION ='eu-west-1'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
+AWS_IS_GZIPPED= True
+GZIP_CONTENT_TYPES = (
+ 'image/jpeg',
+ 'image/png',
+ 'image/gif',
+)
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AXES_ENABLED=True
 AXES_ONLY_USER_FAILURES=True
 AXES_FAILURE_LIMIT=3
 AXES_COOLOFF_TIME=1
-AXES_LOCKOUT_TEMPLATE='Lnocked.html'
-
+AXES_LOCKOUT_TEMPLATE='Locked.html'
+CSP_DEFAULT_SRC = ("'none'",)
+CSP_STYLE_SRC = ("'self'",)
+SESSION_COOKIE_SECURE= True
+CSRF_COOKIE_SECURE= True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_SSL_REDIRECT= True
+SECURE_HSTS_SECONDS=5
+SECURE_HSTS_INCLUDE_SUBDOMAINS =True
+SECURE_HSTS_PRELOAD=True
+X_FRAME_OPTIONS = 'DENY'
+SECURE_REFERRER_POLICY ='same-origin'
 django_heroku.settings(locals())
