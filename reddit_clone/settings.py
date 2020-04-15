@@ -72,7 +72,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware'
+    #'django.middleware.clickjacking.XFrameOptionsMiddleware'
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -198,9 +198,9 @@ AXES_COOLOFF_TIME=1
 AXES_LOCKOUT_TEMPLATE='Locked.html'
 #CSP_DEFAULT_SRC = ("'none'",)
 #CSP_STYLE_SRC = ("'self'",)
-SESSION_COOKIE_SECURE= True
-CSRF_COOKIE_SECURE= True
-SECURE_BROWSER_XSS_FILTER = True
+#SESSION_COOKIE_SECURE= True
+#CSRF_COOKIE_SECURE= True
+#SECURE_BROWSER_XSS_FILTER = True
 #SECURE_SSL_REDIRECT= True
 #SECURE_HSTS_SECONDS=5
 #SECURE_HSTS_INCLUDE_SUBDOMAINS =True
