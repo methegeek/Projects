@@ -12,6 +12,16 @@ class UserRegisterForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'password1', 'password2']
+    class Meta:
+        model = User
+        fields = ("email",)
+    def clean_username(self):
+        username = self.cleaned_data["email"]
+        try:
+            User.objects.get(email=email)
+        except User.DoesNotExist:
+            return email
+        raise forms.ValidationError(("A user with that username already exists."))
 
 class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()

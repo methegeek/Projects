@@ -21,6 +21,8 @@ class Profile(models.Model):
 
     def save(self,**kwargs):
         im = Image.open(self.image)
+        if im.mode != 'RGB':
+            im = im.convert('RGB')
         output = BytesIO()
         im = im.resize((300, 300))
         im.save(output, format='JPEG', quality=90)
