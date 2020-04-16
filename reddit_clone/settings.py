@@ -191,5 +191,5 @@ SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 CSRF_COOKIE_SECURE = True #to avoid transmitting the CSRF cookie over HTTP accidentally.
 SESSION_COOKIE_SECURE = True #to avoid transmitting the session cookie over HTTP accidentally.
-SECURE_SSL_REDIRECT = True
+#SECURE_SSL_REDIRECT = True
 django_heroku.settings(locals())
