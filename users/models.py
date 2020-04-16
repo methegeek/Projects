@@ -19,14 +19,14 @@ class Profile(models.Model):
 
    
 
-   # def save(self,**kwargs):
-    #       im = Image.open(self.image)
-     #      output = BytesIO()
-      #     im = im.resize((300, 300))
-       #    im.save(output, format='JPEG', quality=90)
-        #   output.seek(0)  
-         #  self.image = InMemoryUploadedFile(output, 'ImageField', "%s.jpg" % self.image.name.split('.')[0], 'image/jpeg', sys.getsizeof(output), None)
-          # super(Profile,self).save()
+    def save(self,**kwargs):
+        im = Image.open(self.image)
+        output = BytesIO()
+        im = im.resize((300, 300))
+        im.save(output, format='JPEG', quality=90)
+        output.seek(0)  
+        self.image = InMemoryUploadedFile(output, 'ImageField', "%s.jpg" % self.image.name.split('.')[0], 'image/jpeg', sys.getsizeof(output), None)
+        super(Profile,self).save()
 
 
 
