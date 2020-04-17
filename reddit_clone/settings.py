@@ -142,11 +142,7 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-FEATURE_POLICY = {
-    'geolocation': 'none',
-    'camera':'none',
-    'microphone ':'none',
-}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
