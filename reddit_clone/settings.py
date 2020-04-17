@@ -146,7 +146,6 @@ FEATURE_POLICY = {
     'geolocation': 'none',
     'camera':'none',
     'microphone ':'none',
-    'autoplay':'none',
 }
 
 # Internationalization
