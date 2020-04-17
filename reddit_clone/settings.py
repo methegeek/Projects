@@ -81,6 +81,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     #'axes.middleware.FailedLoginMiddleware',
     'axes.middleware.AxesMiddleware',
+    'django_feature_policy.FeaturePolicyMiddleware',
     
 ]
 
@@ -140,6 +141,13 @@ AUTHENTICATION_BACKENDS = [
     # Django ModelBackend is the default authentication backend.
     'django.contrib.auth.backends.ModelBackend',
 ]
+
+FEATURE_POLICY = {
+    'geolocation': 'none',
+    'camera':'none',
+    'microphone ':'none',
+    'autoplay':'none',
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
