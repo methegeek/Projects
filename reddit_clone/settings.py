@@ -203,8 +203,9 @@ SECURE_HSTS_SECONDS = 15768000  # 1 day
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 SECURE_REFERRER_POLICY = "same-origin"
-CSP_DEFAULT_SRC = ("'self'", )
-CSP_FRAME_ANCESTORS = ("'self'", 'https://example.com/', 'https://example.com/')
-CSP_FORM_ACTION = ("'self'", )
-CSP_INCLUDE_NONCE_IN = ('script-src',)
+CSP_DEFAULT_SRC = ("'none'", )
+CSP_IMG_SRC = ("'self'", 'https://sid-blog.s3.amazonaws.com')
+CSP_SCRIPT_SRC = ('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', 'https://code.jquery.com/jquery-3.2.1.slim.min.js', 'https://code.jquery.com/jquery-git.js', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' )
+CSP_STYLE_SRC= ("'self'", 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/')
+
 django_heroku.settings(locals())
