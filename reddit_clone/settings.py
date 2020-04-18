@@ -81,7 +81,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'csp.middleware.CSPMiddleware',
     #'axes.middleware.FailedLoginMiddleware',
-    'axes.middleware.AxesMiddleware',
+    #'axes.middleware.AxesMiddleware',
     #'django_feature_policy.FeaturePolicyMiddleware',
     
 ]
