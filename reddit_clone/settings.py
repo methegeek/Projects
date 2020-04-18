@@ -202,4 +202,15 @@ SECURE_HSTS_SECONDS = 518400  # 1 day
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 SECURE_REFERRER_POLICY = "same-origin"
+CSP_DEFAULT_SRC = ("'none'", )
+CSP_STYLE_SRC = ("'self'", "fonts.googleapis.com", "'sha256-/3kWSXHts8LrwfemLzY9W0tOv5I4eLIhrf0pT8cU0WI='")
+CSP_SCRIPT_SRC = ("'self'", )
+CSP_IMG_SRC = ("'self'",)
+CSP_FONT_SRC = ("'self'", "fonts.gstatic.com")
+CSP_CONNECT_SRC = ("'self'", )
+CSP_OBJECT_SRC = ("'none'", )
+CSP_BASE_URI = ("'none'", )
+CSP_FRAME_ANCESTORS = ("'self'", 'https://example.com/', 'https://example.com/')
+CSP_FORM_ACTION = ("'self'", )
+CSP_INCLUDE_NONCE_IN = ('script-src',)
 django_heroku.settings(locals())
