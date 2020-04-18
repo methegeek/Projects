@@ -79,6 +79,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'csp.middleware.CSPMiddleware',
     #'axes.middleware.FailedLoginMiddleware',
     'axes.middleware.AxesMiddleware',
     #'django_feature_policy.FeaturePolicyMiddleware',
@@ -202,7 +203,7 @@ SECURE_HSTS_SECONDS = 15768000  # 1 day
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 SECURE_REFERRER_POLICY = "same-origin"
-CSP_DEFAULT_SRC = ("'none'", )
+CSP_DEFAULT_SRC = ("'self'", )
 CSP_FRAME_ANCESTORS = ("'self'", 'https://example.com/', 'https://example.com/')
 CSP_FORM_ACTION = ("'self'", )
 CSP_INCLUDE_NONCE_IN = ('script-src',)
