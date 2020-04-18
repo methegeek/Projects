@@ -126,12 +126,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
     },
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+
     },
 ]
 AUTHENTICATION_BACKENDS = [
@@ -196,7 +198,7 @@ CSRF_COOKIE_SECURE = True #to avoid transmitting the CSRF cookie over HTTP accid
 SESSION_COOKIE_SECURE = True #to avoid transmitting the session cookie over HTTP accidentally.
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
-SECURE_HSTS_SECONDS = 86400  # 1 day
+SECURE_HSTS_SECONDS = 15768000  
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 SECURE_REFERRER_POLICY = "origin-when-cross-origin"
