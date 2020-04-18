@@ -202,7 +202,7 @@ SECURE_HSTS_SECONDS = 15768000  # 1 day
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
 SECURE_REFERRER_POLICY = "same-origin"
-CSP_DEFAULT_SRC = ("'none'", )
+CSP_DEFAULT_SRC = ("'none'","https://signin.aws.amazon.com/" )
 CSP_STYLE_SRC = ("'self'", "fonts.googleapis.com", "'sha256-/3kWSXHts8LrwfemLzY9W0tOv5I4eLIhrf0pT8cU0WI='")
 CSP_SCRIPT_SRC = ("'self'", )
 CSP_IMG_SRC = ("'self'",)
