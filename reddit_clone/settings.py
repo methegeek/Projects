@@ -201,5 +201,5 @@ SECURE_SSL_REDIRECT = True
 SECURE_HSTS_SECONDS = 518400  # 1 day
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_HSTS_PRELOAD = True
-SECURE_REFERRER_POLICY = "origin-when-cross-origin"
+SECURE_REFERRER_POLICY = "same-origin"
 django_heroku.settings(locals())
