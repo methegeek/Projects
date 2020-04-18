@@ -79,9 +79,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'csp.middleware.CSPMiddleware',
+    #'csp.middleware.CSPMiddleware',
     #'axes.middleware.FailedLoginMiddleware',
-    #'axes.middleware.AxesMiddleware',
+    'axes.middleware.AxesMiddleware',
     #'django_feature_policy.FeaturePolicyMiddleware',
     
 ]
