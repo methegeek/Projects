@@ -41,7 +41,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%$97#$a!3#vro0=h0tupyte^=$f^@y#*#+4n@tmo%ku&!nol5='
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG =False 
+DEBUG =True 
 #DEBUG404 = True 
 #ALLOWED_HOSTS = ['*'] # it works but not secure, so use
 
@@ -51,7 +51,7 @@ ALLOWED_HOSTS = ['sidsblog.herokuapp.com','.herokuapp.com','heroku.com']
 #ALLOWED_HOSTS = ['*']
 SITE_ID = 1
 # Application definition
-ACCOUNT_ACTIVATION_DAYS = 7
+
 INSTALLED_APPS = [
     
     'blog.apps.BlogConfig',
@@ -64,9 +64,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'storages',
-    'verified_email_field',
     'axes',
-    
+    #'django_expiring_token',
     
 ]
 
