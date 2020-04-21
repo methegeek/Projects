@@ -6,12 +6,6 @@ from.models import Profile
 
 
 
-class UserRegisterForm(UserCreationForm):
-
-    
-    class Meta:
-        model = User
-        fields = ['username', 'email', 'password1', 'password2']
 class UserForm(forms.ModelForm):
     class Meta:
         model = User
@@ -30,6 +24,13 @@ class UserForm(forms.ModelForm):
 
         # A user was found with this as a username, raise an error.
         raise forms.ValidationError('This email address is already in use.')
+class UserRegisterForm(UserCreationForm):
+
+    
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
+
 class UserUpdateForm(forms.ModelForm):
     email = forms.EmailField()
 
