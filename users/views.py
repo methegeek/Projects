@@ -8,9 +8,13 @@ def register(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
+            emailvalue= form.cleaned_data.get("email")
+            try:
+                user= UserRegisterForm.objects.get(email=emailvalue)
+                context= {'form': form, 'error':'The Email you entered has already been taken. Please try another email.'}
             form.save()
             username = form.cleaned_data.get('username')
-            messages.success(request, f'Your account has been created! You are now able to log in')
+            
             return redirect('login')
     else:
         form = UserRegisterForm()
