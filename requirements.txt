@@ -10,7 +10,7 @@ django-appconf==1.0.4
 django-axes==5.3.1
 django-crispy-forms==1.8.1
 django-csp==3.6
-django-debug-toolbar==2.2
+django-debug-toolbar==2.2.1
 django-feature-policy==3.3.0
 django-heroku==0.3.1
 django-ipware==2.1.0
